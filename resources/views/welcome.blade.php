@@ -44,7 +44,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Jenny's Site</div>
+                <div class="title">Demo Site</div>
                 <div class="quote">{{ Inspiring::quote() }}</div>
             </div>
         </div>
