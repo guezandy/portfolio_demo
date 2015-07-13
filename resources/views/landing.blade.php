@@ -52,7 +52,7 @@
       background-repeat: no-repeat;
       box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.0);
       color: rgb(255,255,255);
-      font-size: 30px;
+      font-size: 24px;
       margin: 0;
       overflow: hidden;
       padding-top: 2px;
@@ -69,7 +69,7 @@
     .input{
       width: 100%;
       text-align: center;
-      font-size:30px;
+      font-size:24px;
       font-family: 'Open Sans';
       background-color: rgba(0, 0, 0, 0.0);
       border:0;
@@ -93,6 +93,7 @@
 			letter-spacing: 1px;
 			margin-bottom: 45px;
 			color: #fff;
+			font-size-adjust: auto;
 			margin-top: 0;
     }
 
@@ -140,7 +141,7 @@
   			<div class="blur">
   				<div class="panel-body">
             <div class="col-md-12 col-sm-12 col-xs-12">
-              <h1 class="title">Upon arrival to:<h1>
+              <h1 class="title">Upon arrival to:</h1>
             </div>
             <form class="form-horizontal" method="any" action="{{ url('/search')}}">
   						<div class="form-group">
