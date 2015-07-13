@@ -12,8 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing');
 });
+
+Route::get('search', 'FourSquareController@index');
 
 Route::get('home', 'HomeController@home');
 
