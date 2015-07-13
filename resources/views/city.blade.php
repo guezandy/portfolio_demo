@@ -24,6 +24,7 @@
 
     <!-- FONTS -->
     <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 
     <!-- PLUGINS -->
     <link rel="stylesheet" href="assets/css/plugins/animations.css">
@@ -33,6 +34,26 @@
     <link rel="stylesheet" href="assets/css/plugins/owl.carousel.css">
     <link rel="stylesheet" href="assets/css/plugins/font-awesome.css">
     <link rel="stylesheet" href="assets/css/plugins/devicons.css">
+
+    <style>
+      .category {
+        text-align: left;
+        padding-left: 20px;
+      }
+
+      .venue_name {
+        padding-top: 15px;
+        padding-right: 50px;
+        padding-bottom: 0px;
+        padding-left: 50px;
+        font-family: "Pacifico";
+      }
+
+      .line {
+        padding-top: 25px;
+        padding-right: 50px;
+      }
+    </style>
 </head>
 
 <body>
@@ -57,7 +78,7 @@
                 <!-- Tab panes -->
                 <div style="position:relative">
                   <div class="lg-title-overlay">
-                    {{$search}}
+                     {{$search}}
                   </div>
                 <div>
                 <div class="tab-content">
@@ -77,10 +98,15 @@
                                               </div>
                                             </div>
                                             <div class="hidden-part">
-                                                <h4 class="type">{{$category[$i]}}</h4>
-                                                <h4 padding-top: "25px" padding-right: "50px" padding-bottom: "25px" padding-left: "50px">{{$names[$i]}}</h4>
-                                                <h5>{{$address[$i]}}</h5>
-                                                <h5>{{$phone[$i]}}</h5>
+                                                <h4 class="category">{{$category[$i]}}</h4>
+                                                <hr class="line">
+                                                <h1 class="venue_name">{{$names[$i]}}</h1>
+                                                @if($address[$i] != "n/a")
+                                                  <h5>{{$address[$i]}}</h5>
+                                                @endif
+                                                @if($phone[$i] != "n/a")
+                                                  <h5>{{$phone[$i]}}</h5>
+                                                @endif
                                                 @if($url[$i] != "n/a")
                                                 <a href="{!! $url[$i] !!}">
                                                     <h5 class="text-primary details">Check out website!</h5>
@@ -114,7 +140,7 @@
             <div class="container">
                 <!--<div class="space-md"></div>-->
                 <div>
-                    &copy; 2015 Luna Developer. All rights reserved.
+                    &copy; 2015 <a href="http://lunadeveloper.com">Luna Developer</a>. All rights reserved.
                 </div>
             </div>
         </div>

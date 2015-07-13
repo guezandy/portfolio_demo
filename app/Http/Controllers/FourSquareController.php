@@ -69,8 +69,16 @@ class FourSquareController extends Controller {
 		$venue_count = count($venues);
 		for($i = 0; $i < $venue_count; $i++) {
 			$names[$i] = $venues[$i]->{'name'};
-			$address[$i] = $venues[$i]->{'location'}->address . "\n" . $venues[$i]->{'location'}->city . " , " . $venues[$i]->{'location'}->state . " ," . $venues[$i]->{'location'}->postalCode;
-			$phone[$i] = $venues[$i]->{'contact'}->formattedPhone;
+			if (isset( $venues[$i]->{'location'}->address ) ) {
+				$address[$i] = $venues[$i]->{'location'}->address . "\n" . $venues[$i]->{'location'}->city . " , " . $venues[$i]->{'location'}->state . " ," . $venues[$i]->{'location'}->postalCode;
+		 	} else {
+				$address[$i] = "n/a";
+			}
+			if (isset( $venues[$i]->{'contact'}->formattedPhone) ) {
+				$phone[$i] = $venues[$i]->{'contact'}->formattedPhone;
+			} else {
+				$phone[$i] = "n/a";
+			}
 			if (isset( $venues[$i]->{'url'} ) ) {
 				$url[$i] = $venues[$i]->{'url'};
 			} else {
