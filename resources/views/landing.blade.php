@@ -157,7 +157,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="logo">
-					<img src="assets/img/poweredby.png" style="max-width:200px">
+					<img src="assets/img/power3.png" style="max-width:200px">
 				</div>
 			</div>
 		</div>
