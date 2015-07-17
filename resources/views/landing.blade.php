@@ -29,6 +29,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Check out popular venues in any city in the US. Travel like a local.">
 	<title>Upon Arrival to:</title>
 
 	<link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
